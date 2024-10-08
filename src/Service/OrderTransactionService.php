@@ -39,11 +39,12 @@ class OrderTransactionService
     public function getCurrentXrpPriceForOrder(WC_Order $order): array {
         $orderTotal = $order->get_total();
         $currency = $order->get_currency();
-        $xrpUnitPrice = $this->priceProvider->getCurrentExchangeRate($currency);
+        $exchangeRate = $this->priceProvider->getCurrentExchangeRate($currency);
+
         return [
             'pairing' => 'XRP/' . $currency,
-            'exchange_rate' => $xrpUnitPrice,
-            'amount_requested' => $orderTotal / $xrpUnitPrice
+            'exchange_rate' => $exchangeRate,
+            'amount_requested' => $orderTotal / $exchangeRate
         ];
     }
 

@@ -1,11 +1,11 @@
 {
   "name": "hardcastle/ledger-direct-woocommerce",
-  "type": "project",
+  "type": "wordpress-plugin",
   "description": "XRP Ledger integration",
   "license": "MIT",
   "require": {
     "php": "^8.1.0",
-    "hardcastle/xrpl_php": "^v0.8.7",
+    "hardcastle/xrpl_php": "^v0.9.2",
     "php-di/php-di": "^7.0"
   },
   "require-dev": {
@@ -13,13 +13,19 @@
     "10up/wp_mock": "^0.4.2",
     "brain/monkey": "^2.6",
     "phpstan/phpstan": "^1.10",
-    "php-stubs/wordpress-tests-stubs": "^6.1"
+    "php-stubs/wordpress-tests-stubs": "^6.1",
+    "woocommerce/woocommerce": "8.2.1"
   },
   "autoload": {
     "psr-4": {
       "Hardcastle\\LedgerDirect\\": "src/",
       "Hardcastle\\LedgerDirect\\Tests\\": "tests/"
     }
+  },
+  "autoload-dev": {
+    "classmap": [
+      "vendor/woocommerce/woocommerce/tests/framework"
+    ]
   },
   "authors": [
     {
