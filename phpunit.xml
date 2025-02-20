@@ -3,7 +3,6 @@
         bootstrap="tests/bootstrap.php"
         colors="true"
         stopOnFailure="false"
-        displayDetailsOnTestsThatTriggerWarnings="true"
 >
   <testsuites>
     <testsuite name="tests">
