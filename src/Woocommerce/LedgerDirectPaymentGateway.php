@@ -24,7 +24,6 @@ class LedgerDirectPaymentGateway extends WC_Payment_Gateway
 
     public string $xrpl_mainnet_destination_account;
 
-
     public string $xrpl_network;
 
     protected OrderTransactionService $orderTransactionService;
